@@ -16,6 +16,15 @@ downButton.addEventListener('click', () => {
     changeSlides('down');
 });
 
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowUp') {
+        changeSlides('up');
+    }
+    if (e.key === 'ArrowDown') {
+        changeSlides('down');
+    }
+})
+
 function changeSlides(direction) {
     containerHeight = container.clientHeight;
     if (direction === 'up') {
